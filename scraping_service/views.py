@@ -1,5 +1,7 @@
 from django.shortcuts import render
+
 import datetime
+
 
 def home(request):
     name = 'Руся'
