@@ -27,15 +27,15 @@ class City(models.Model):
 
 class Language(models.Model):
     name = models.CharField(max_length=50,
-                            verbose_name='Язык програмирование',
+                            verbose_name='Язык программирование',
                             unique=True)
 
     slug = models.CharField(max_length=50, blank=True,
                             unique=True)
 
     class Meta:
-        verbose_name = 'Язык програмирование'
-        verbose_name_plural = 'Языки програмирования'
+        verbose_name = 'Язык программирование'
+        verbose_name_plural = 'Языки программирования'
 
     def __str__(self):
         return self.name
@@ -53,7 +53,7 @@ class Vacancy(models.Model):
     company = models.CharField(max_length=250, verbose_name='Компания')
     description = models.TextField(verbose_name='Описание вакансии')
     city = models.ForeignKey('City', on_delete=models.CASCADE, verbose_name='Город')
-    language = models.ForeignKey('Language', on_delete=models.CASCADE,verbose_name='Язык програмирование')
+    language = models.ForeignKey('Language', on_delete=models.CASCADE, verbose_name='Язык программирование')
     timestamp = models.DateField(auto_now_add=True)
 
     class Meta:

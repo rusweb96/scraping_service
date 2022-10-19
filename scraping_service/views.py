@@ -7,4 +7,4 @@ def home(request):
     name = 'Руся'
     date = datetime.datetime.now().date()
     context = {'name': name, 'data': date}
-    return render(request, 'home.html', context)
+    return render(request, 'home1.html', context)
