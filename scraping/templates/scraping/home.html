@@ -14,18 +14,19 @@
                     <p>{{ obj.description }}</p>
                 </blockquote>
                 <p>Компания {{ obj.company }}</p>
-                <p>{{ obj.city }}, {{ obj.timestamp }}</p>
+                <p>{{ obj.city }}, {{ obj.language }}</p>
+                <p>{{ obj.timestamp }}</p>
             </div>
         </div>
-        {% empty %}
-            <h3>Нечего не найдено!</h3>
+    {% empty %}
+        <h3>Нечего не найдено!</h3>
     {% endfor %}
 
     <div class="row">
         <div class="col-md-6 mx-auto">
             <form method="get" action="">
                 <div class="form-group">
-                    {{ form.as_p }}
+                    {{ form.as_table }}
                 </div>
                 <input class="btn btn-primary" type="submit" value="Найти">
             </form>
